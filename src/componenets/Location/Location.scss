@@ -1,0 +1,34 @@
+@import "src/styles/mixins";
+
+.location {
+  max-width: 550px;
+  margin: 40px auto 0 auto;
+  &-box {
+    position: relative;
+  }
+
+  .search {
+    position: absolute;
+    right: 16px;
+    top: 15px;
+    color: var(--text-gray);
+  }
+
+  &-result {
+    height: 100px;
+    overflow: auto;
+    border-radius: 16px;
+    border: 1px solid var(--cta-primary);
+    padding: 12px;
+    margin-bottom: 12px;
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+    p {
+      cursor: pointer;
+      &:hover {
+        color: var(--cta-primary);
+      }
+    }
+  }
+}

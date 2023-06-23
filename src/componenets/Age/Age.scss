@@ -1,0 +1,58 @@
+@import "src/styles/mixins";
+
+.age {
+  margin: 40px auto;
+  max-width: 560px;
+
+  &-inner {
+    &__form {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 24px;
+
+      .arrow-down {
+        margin-right: 24px;
+      }
+
+      .label {
+        line-height: unset;
+        color: var(--text-black);
+      }
+
+      fieldset {
+        border: 1px solid var(--cta-primary);
+      }
+
+      .day, .month, .year {
+        background: var(--bg-white);
+        height: 48px;
+        border-radius: 16px;
+        font-weight: 400;
+        font-size: 18px;
+        color: var(--text-black);
+      }
+
+      .day, .year {
+        width: 148px;
+      }
+      .month {
+        width: 186px;
+      }
+    }
+  }
+}
+
+@media (min-width: 375px) and (max-width: 563px) {
+  .age {
+    &-inner {
+      &__form {
+        flex-direction: column;
+        min-height: 180px;
+        .day, .year, .month {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

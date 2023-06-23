@@ -1,0 +1,13 @@
+@import "src/styles/mixins";
+
+.btn-link {
+  width: 43px;
+  height: 26px;
+  @include text-500-18-26;
+  color: var(--text-black);
+  border: none;
+  outline: none;
+  background: transparent;
+  margin: 22px auto 40px auto;
+  cursor: pointer;
+}

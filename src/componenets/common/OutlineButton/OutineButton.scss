@@ -1,0 +1,23 @@
+@import "src/styles/mixins";
+
+.btn-outline {
+  width: 560px;
+  height: 48px;
+  border: 1px solid var(--text-gray);
+  border-radius: 16px;
+  outline: none;
+  background: transparent;
+  @include text-500-18-26;
+  color: var(--text-gray);
+  cursor: pointer;
+  &:hover, &.btn-active {
+    border: 1px solid var(--cta-primary);
+    color: var(--cta-primary);
+  }
+}
+
+@media (min-width: 375px) and (max-width: 563px) {
+  .btn-outline {
+    width: 300px;
+  }
+}

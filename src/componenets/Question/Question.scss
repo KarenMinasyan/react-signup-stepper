@@ -1,0 +1,39 @@
+@import "src/styles/mixins";
+
+.question {
+  width: 70%;
+  height: 48px;
+  display: flex;
+  margin-top: 40px;
+  &-bot {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    margin-right: 16px;
+  }
+  &-message {
+    width: 277px;
+    height: 48px;
+    background: var(--bg-gray);
+    border-radius: 0 12px 12px 12px;
+    @include flex-center;
+    &__text {
+      @include text-400-18-26;
+      color: var(--text-black);
+    }
+  }
+
+  &.start {
+    justify-content: flex-start;
+  }
+
+  &.center {
+    justify-content: center;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 563px) {
+  .question {
+    width: 100%;
+  }
+}
