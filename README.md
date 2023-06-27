@@ -3,7 +3,7 @@
 clone the repo  <br/>
 run npm install  <br/>
 copy .env.example and create .env <br/>
-give the value of base url in .env https://iconnect247.net/api/v2 <br/>
+give the value of base url in .env <br/>
 then run with `npm start`
 
 
