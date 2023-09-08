@@ -15,6 +15,8 @@ const Username = () => {
 	const {
 		register,
 		handleSubmit,
+    setValue,
+    getValues,
 		watch,
 		formState: { errors },
 	} = useForm({ mode: 'onChange' });
@@ -22,6 +24,23 @@ const Username = () => {
 	const { error } = useSelector(appSelector);
 
 	const dispatch = useDispatch();
+
+  useEffect(() => {
+    const storedData = localStorage.getItem('username')
+    if (storedData) {
+      setValue('username', storedData)
+      localStorage.removeItem('username')
+    }
+    window.addEventListener('unload', handleBeforeRefresh)
+
+    return () => {
+      window.removeEventListener('unload', handleBeforeRefresh)
+    }
+  }, []);
+
+  const handleBeforeRefresh = () => {
+    localStorage.setItem('username', getValues('username'))
+  }
 
 	useEffect(() => {
 		const subscription = watch(v => v);

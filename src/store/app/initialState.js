@@ -1,7 +1,7 @@
 const initialState = {
 	loading: false,
 	interest: '',
-	step: 0,
+	step: 5,
 	gender: null,
 	looking_for: null,
 	DOB: null,
